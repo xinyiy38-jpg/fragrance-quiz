@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AR Fragrance Studio | Fragrance Preference Test</title>
+
+        <!-- 添加Font Awesome图标库 -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- Google字体 -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- 自定义CSS -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- 语言选择页面 -->
+            <div id="languagePage" class="page active">
+                <div class="brand-header">
+                    <h1><i class="fas fa-spa"></i> AR Fragrance Studio</h1>
+                    <p class="subtitle">Find Your Signature Scent</p>
+                </div>
+
+                <div class="language-card">
+                    <div class="language-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h2>请选择语言 / Choose Language</h2>
+                    <p class="language-text">
+                        Select your preferred language for the test<br />
+                        请选择您偏好的测试语言
+                    </p>
+
+                    <div class="language-options">
+                        <div class="language-option" data-lang="zh">
+                            <div class="flag-icon">🇨🇳</div>
+                            <div class="language-info">
+                                <h3>中文</h3>
+                                <p>使用中文进行测试</p>
+                            </div>
+                            <i class="fas fa-check-circle check-icon"></i>
+                        </div>
+
+                        <div class="language-option" data-lang="en">
+                            <div class="flag-icon">🇺🇸</div>
+                            <div class="language-info">
+                                <h3>English</h3>
+                                <p>Take the test in English</p>
+                            </div>
+                            <i class="fas fa-check-circle check-icon"></i>
+                        </div>
+
+                        <div class="language-option" data-lang="my">
+                            <div class="flag-icon">🇲🇲</div>
+                            <div class="language-info">
+                                <h3>မြန်မာ</h3>
+                                <p>မြန်မာဘာသာဖြင့် စမ်းသပ်ပါ</p>
+                            </div>
+                            <i class="fas fa-check-circle check-icon"></i>
+                        </div>
+                    </div>
+
+                    <button id="startBtn" class="btn-primary" disabled>
+                        开始测试 / Start Test <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                    <div class="language-disclaimer">
+                        <i class="fas fa-info-circle"></i>
+                        您可以在测试过程中随时切换语言<br />
+                        You can switch languages at any time during the test
+                    </div>
+                </div>
+            </div>
+
+            <!-- 欢迎页面 -->
+            <div id="welcomePage" class="page">
+                <div class="brand-header">
+                    <h1><i class="fas fa-spa"></i> AR Fragrance Studio</h1>
+                    <p class="subtitle">Find Your Signature Scent</p>
+                </div>
+
+                <div class="welcome-card">
+                    <div class="perfume-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h2 id="welcomeTitle">找到你的专属香调</h2>
+                    <p class="intro-text" id="welcomeText">
+                        通过10个场景测试题，分析你的香调偏好<br />
+                        根据你的选择占比，推荐最适合你的香水类型
+                    </p>
+
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-chart-pie"></i>
+                            <span id="feature1">香调占比分析</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <span id="feature2">个性化推荐</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-magic"></i>
+                            <span id="feature3">专属调香建议</span>
+                        </div>
+                    </div>
+
+                    <button id="continueBtn" class="btn-primary">
+                        <span id="continueText">开始测试</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                    <div class="disclaimer">
+                        <i class="fas fa-info-circle"></i>
+                        <span id="disclaimerText"
+                            >测试约需3-5分钟，所有数据仅用于分析</span
+                        >
+                    </div>
+
+                    <div class="language-switch">
+                        <button class="btn-language" id="switchLanguageBtn">
+                            <i class="fas fa-language"></i>
+                            <span id="switchLanguageText"
+                                >Switch to English</span
+                            >
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 基本信息页面 -->
+            <div id="basicInfoPage" class="page">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 10%"></div>
+                </div>
+
+                <div class="page-header">
+                    <button class="back-btn" onclick="goBack()">
+                        <i class="fas fa-arrow-left"></i>
+                        <span id="backText">返回</span>
+                    </button>
+                    <h2 id="basicInfoTitle">基本信息</h2>
+                    <div class="step">1/3</div>
+                </div>
+
+                <div id="basicQuestionsContainer"></div>
+
+                <div class="page-footer">
+                    <button id="toQuizBtn" class="btn-primary" disabled>
+                        <span id="toQuizText">继续场景测试</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="language-switch-bottom">
+                    <button class="btn-language-small" id="switchLanguageBtn2">
+                        <i class="fas fa-language"></i>
+                        <span id="switchLanguageText2">Switch to English</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 场景测试页面 -->
+            <div id="quizPage" class="page">
+                <div class="progress-bar">
+                    <div class="progress" id="quizProgress"></div>
+                </div>
+
+                <div class="page-header">
+                    <button class="back-btn" onclick="goBack()">
+                        <i class="fas fa-arrow-left"></i>
+                        <span id="backText2">返回</span>
+                    </button>
+                    <h2 id="quizTitle">场景测试</h2>
+                    <div class="step">
+                        <span id="currentQuestion">1</span>/10
+                    </div>
+                </div>
+
+                <div class="quiz-content">
+                    <div class="question-header">
+                        <h3 id="questionText"></h3>
+                        <div class="question-counter">
+                            <span id="questionNumberText">第</span>
+                            <span id="qNumber">1</span>
+                            <span id="questionNumberText2">题</span>
+                        </div>
+                    </div>
+
+                    <div id="optionsContainer" class="options-grid"></div>
+
+                    <div class="current-score">
+                        <h4 id="scoreTitle">当前香调分布</h4>
+                        <div id="scorePreview" class="score-preview"></div>
+                    </div>
+                </div>
+
+                <div class="page-footer">
+                    <button id="nextBtn" class="btn-secondary" disabled>
+                        <span id="nextText">下一题</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button
+                        id="submitBtn"
+                        class="btn-primary"
+                        style="display: none"
+                    >
+                        <span id="submitText">查看结果</span>
+                        <i class="fas fa-chart-pie"></i>
+                    </button>
+                </div>
+
+                <div class="language-switch-bottom">
+                    <button class="btn-language-small" id="switchLanguageBtn3">
+                        <i class="fas fa-language"></i>
+                        <span id="switchLanguageText3">Switch to English</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 注意事项页面 -->
+            <div id="notePage" class="page">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%"></div>
+                </div>
+
+                <div class="page-header">
+                    <button class="back-btn" onclick="goBackFromNote()">
+                        <i class="fas fa-arrow-left"></i>
+                        <span id="noteBackText">返回</span>
+                    </button>
+                    <h2 id="noteTitle">注意事项</h2>
+                    <div class="step">3/3</div>
+                </div>
+
+                <div class="note-content">
+                    <div class="note-image-container">
+                        <img id="noteImage" src="" alt="注意事项" class="note-image">
+                    </div>
+                    
+                    <div class="note-text">
+                        <p id="noteMessage">
+                            请仔细阅读注意事项后查看测试结果
+                        </p>
+                    </div>
+                    
+                    <div class="note-confirm">
+                        <label class="checkbox-container" id="agreeCheckbox">
+                            <input type="checkbox" id="agreeCheck">
+                            <span class="checkmark"></span>
+                            <span id="agreeText">我已阅读并理解上述注意事项</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="page-footer">
+                    <button id="confirmNoteBtn" class="btn-primary" disabled>
+                        <span id="confirmText">查看测试结果</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="language-switch-bottom">
+                    <button class="btn-language-small" id="switchLanguageBtnNote">
+                        <i class="fas fa-language"></i>
+                        <span id="switchLanguageTextNote">Switch to English</span>
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- 结果页面 -->
+            <div id="resultPage" class="page">
+                <div class="result-header">
+                    <h2 id="resultTitle">你的香调分析报告</h2>
+                    <p class="subtitle" id="resultSubtitle">
+                        基于你的10个选择生成
+                    </p>
+                </div>
+
+                <div class="result-content">
+                    <!-- 主导香调卡片 -->
+                    <div class="main-result-card">
+                        <div class="result-title">
+                            <i class="fas fa-crown"></i>
+                            <h3 id="dominantTitle">你的主导香调</h3>
+                        </div>
+                        <!-- 新增：大尺寸图片展示区 -->
+                        <div class="dominant-image-container">
+                            <img id="dominantImage" src="" alt="主导香调图片" class="dominant-image">
+                        </div>
+
+                        <div id="dominantCategory" class="dominant-category"></div>
+                    </div>
+
+                    <!-- 详细占比分析部分 -->
+                    <div class="analysis-card">
+                    <h3>
+                        <i class="fas fa-chart-pie"></i>
+                        <span id="analysisTitle">香调占比分析</span>
+                    </h3>
+                    <div id="scoreChart" class="score-chart"></div>
+                    <div id="scoreDetails" class="score-details"></div>
+                    </div>
+
+                    <!-- 个性化推荐 -->
+                    <div class="recommendation-card">
+                        <h3>
+                            <i class="fas fa-star"></i>
+                            <span id="recommendationTitle">个性化推荐</span>
+                        </h3>
+                        <div id="recommendations"></div>
+                    </div>
+
+                    <!-- 调香建议 -->
+                    <div class="suggestion-card">
+                        <h3>
+                            <i class="fas fa-lightbulb"></i>
+                            <span id="suggestionTitle">调香建议</span>
+                        </h3>
+                        <div id="suggestions"></div>
+                    </div>
+
+                    <!-- 香水配方示例 -->
+                    <div class="recipe-card">
+                        <h3>
+                            <i class="fas fa-flask"></i>
+                            <span id="recipeTitle">专属配方示例</span>
+                        </h3>
+                        <div id="recipeExample"></div>
+                    </div>
+                </div>
+
+                <div class="result-footer">
+                    <button id="restartBtn" class="btn-secondary">
+                        <i class="fas fa-redo"></i>
+                        <span id="restartText">重新测试</span>
+                    </button>
+                    <button id="shareBtn" class="btn-primary">
+                        <i class="fas fa-share-alt"></i>
+                        <span id="shareText">分享结果</span>
+                    </button>
+                </div>
+
+                <div class="language-switch-bottom">
+                    <button class="btn-language-small" id="switchLanguageBtn4">
+                        <i class="fas fa-language"></i>
+                        <span id="switchLanguageText4">Switch to English</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 分享模态框 -->
+        <div id="shareModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>
+                    <i class="fas fa-share-alt"></i>
+                    <span id="shareModalTitle">分享你的香调分析</span>
+                </h3>
+                <div class="share-options">
+                    <button class="share-option" data-platform="wechat">
+                        <i class="fab fa-weixin"></i> <span>微信</span>
+                    </button>
+                    <button class="share-option" data-platform="weibo">
+                        <i class="fab fa-weibo"></i> <span>微博</span>
+                    </button>
+                    <button class="share-option" data-platform="copy">
+                        <i class="fas fa-link"></i>
+                        <span id="copyLinkText">复制链接</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
