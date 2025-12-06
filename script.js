@@ -1,4 +1,6 @@
 // script.js - 香水问卷逻辑（多语言版本 - 包含缅甸语）
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxETRWl8xtSJ_O0coK5lmZU-6MHBTNmKUoyJf7M9iB5cQEP9Ain1nTRGPmMLhH7YGDX5g/exec"
+let hasSentData = false; // 标记是否已发送数据
 
 // 全局变量
 let currentPage = "language";
@@ -2227,7 +2229,15 @@ function calculateResults() {
 
   // 显示配方示例
   renderRecipeExample(dominantCategories.map(([cat]) => cat));
+
+  // 发送数据到Google Sheets（如果尚未发送）
+  if (!hasSentData) {
+    sendResultsToGoogleSheets(dominantCategories);
+    hasSentData = true;
+  }
 }
+
+
 
 // 渲染分数图表
 function renderScoreChart(percentages) {
@@ -2338,6 +2348,56 @@ function getRecommendationByCategory(category, percentages) {
       ? "Based on your preferences, try blending multiple fragrance notes to create a unique scent."
       : "သင်၏နှစ်သက်မှုများအပေါ် အခြေခံ၍၊ ထူးခြားသောရနံ့တစ်ခုဖန်တီးရန် ရနံ့အမျိုးမျိုးကို ရောစပ်ကြည့်ပါ။")
   );
+}
+
+// 新增函数：发送结果到Google Sheets
+function sendResultsToGoogleSheets(dominantCategories) {
+  // 收集所有需要发送的数据
+  const dataToSend = {
+    language: currentLanguage,
+    basicInfo: {
+      q1: userAnswers.q1 || '',
+      q2: userAnswers.q2 || '',
+      q3: userAnswers.q3 || ''
+    },
+    scores: scores,
+    dominantCategory: dominantCategories.length > 0 ? dominantCategories[0][0] : '',
+    totalQuestions: Object.keys(scores).reduce((sum, category) => sum + scores[category], 0),
+    quizAnswers: {}
+  };
+  
+  // 收集所有场景测试的答案
+  const currentQuestions = questions[currentLanguage];
+  currentQuestions.forEach((question, index) => {
+    const answerIndex = userAnswers[question.id];
+    if (answerIndex !== undefined) {
+      const answer = question.options[answerIndex];
+      dataToSend.quizAnswers[`q${index + 1}`] = {
+        question: question.text,
+        answer: answer.text,
+        category: answer.category
+      };
+    }
+  });
+  
+  console.log('准备发送数据到Google Sheets:', dataToSend);
+  
+  // 发送数据到Google Apps Script
+  fetch(GOOGLE_SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors', // 由于Google Apps Script的CORS限制，使用no-cors模式
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(dataToSend)
+  })
+  .then(() => {
+    console.log('数据已发送到Google Sheets');
+    // 由于no-cors模式，我们无法读取响应，但可以假设发送成功
+  })
+  .catch(error => {
+    console.error('发送数据到Google Sheets时出错:', error);
+  });
 }
 
 // 渲染调香建议
@@ -2474,6 +2534,7 @@ function restartQuiz() {
   };
   userAnswers = {};
   hasShownNote = false; // 重置注意事项显示标记
+  hasSentData = false; // 重置数据发送标记
 
   // 返回到语言选择页面
   navigateTo("language");
