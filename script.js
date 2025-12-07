@@ -2129,6 +2129,8 @@ function nextQuestion() {
   if (currentQuestion < currentQuestions.length - 1) {
     currentQuestion++;
     loadQuestion();
+    //新增：切换题目后回到顶部，让用户先看到问题
+    window.scrollTo({ top:0,behavior: "smooth" });
   }
 }
 
