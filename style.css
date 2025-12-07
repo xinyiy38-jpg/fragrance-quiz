@@ -258,8 +258,8 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), #7b5fa8);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-color), #DCC8CA);
+    color: light grayish magenta;
     box-shadow: 0 4px 15px rgba(138, 109, 174, 0.3);
 }
 
@@ -306,7 +306,7 @@ body {
 
 .btn-language:hover {
     background: var(--primary-color);
-    color: white;
+    color: light grayish magenta;
 }
 
 .language-switch-bottom {
@@ -351,7 +351,7 @@ body {
 /* 进度条 */
 .progress-bar {
     height: 6px;
-    background: #e0e0e0;
+    background: #DCC8DC;
     border-radius: 3px;
     margin-bottom: 30px;
     overflow: hidden;
@@ -402,7 +402,7 @@ body {
 
 .step {
     background: var(--primary-color);
-    color: white;
+    color:  light grayish magenta;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -431,11 +431,11 @@ body {
 
 .option-item {
     padding: 16px;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #dcc8dc;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: white;
+    background:  light grayish magenta;
     text-align: left;
 }
 
@@ -498,7 +498,7 @@ body {
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: white;
+    background:  light grayish magenta;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -577,8 +577,8 @@ body {
 .note-image-container {
     margin: 20px auto;
     width: 90%;
-    max-width: 600px;
-    height: 500px; /* 初始显示高度 */
+    max-width: 2300px;
+    height: 1000px; /* 初始显示高度 */
     border-radius: 15px;
     overflow: auto; /* 改为auto以支持滚动 */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
@@ -612,7 +612,7 @@ body {
 .note-confirm {
     margin: 25px 0;
     padding: 15px;
-    background-color: #f5f5f5;
+    background-color: #dcc8ca;
     border-radius: 8px;
 }
 
@@ -651,7 +651,7 @@ body {
 }
 
 .checkbox-container:hover input ~ .checkmark {
-    background-color: #f0f0f0;
+    background-color: #dcc8ca;
 }
 
 .checkbox-container input:checked ~ .checkmark {
@@ -736,8 +736,8 @@ body {
 /* 主导香调大图片容器 - 允许滚动查看完整图片 */
 .dominant-image-container {
     width: 100%;
-    height: 500px; /* 初始显示高度 */
-    margin: 20px auto;
+    height: 2300px; /* 初始显示高度 */
+    margin: 1000px auto;
     border-radius: 15px;
     overflow: auto; /* 改为auto以支持滚动 */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
