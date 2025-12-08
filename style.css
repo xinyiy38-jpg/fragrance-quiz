@@ -258,8 +258,8 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), #DCC8CA);
-    color: light grayish magenta;
+    background: linear-gradient(135deg, var(--primary-color), #ffffff);
+    color: white;
     box-shadow: 0 4px 15px rgba(138, 109, 174, 0.3);
 }
 
@@ -306,7 +306,7 @@ body {
 
 .btn-language:hover {
     background: var(--primary-color);
-    color: light grayish magenta;
+    color: white;
 }
 
 .language-switch-bottom {
@@ -351,7 +351,7 @@ body {
 /* 进度条 */
 .progress-bar {
     height: 6px;
-    background: #DCC8DC;
+    background: #ffffff;
     border-radius: 3px;
     margin-bottom: 30px;
     overflow: hidden;
@@ -402,7 +402,7 @@ body {
 
 .step {
     background: var(--primary-color);
-    color:  light grayish magenta;
+    color: white;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -431,11 +431,11 @@ body {
 
 .option-item {
     padding: 16px;
-    border: 2px solid #dcc8dc;
+    border: 2px solid #ffffff;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background:  light grayish magenta;
+    background:  white;
     text-align: left;
 }
 
@@ -498,7 +498,7 @@ body {
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background:  light grayish magenta;
+    background:  white;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -612,7 +612,7 @@ body {
 .note-confirm {
     margin: 25px 0;
     padding: 15px;
-    background-color: #dcc8ca;
+    background-color: #ffffff;
     border-radius: 8px;
 }
 
@@ -651,12 +651,12 @@ body {
 }
 
 .checkbox-container:hover input ~ .checkmark {
-    background-color: #dcc8ca;
+    background-color: #fff;
 }
 
 .checkbox-container input:checked ~ .checkmark {
-    background-color: #8A6DAE;
-    border-color: #8A6DAE;
+    background-color: #fff;
+    border-color: #ccc;
 }
 
 .checkmark:after {
@@ -815,7 +815,7 @@ body {
 .category-icon-large {
     font-size: 3.5rem;
     margin: 15px 0;
-    color: #8A6DAE;
+    color: #fff;
     background-color: rgba(138, 109, 174, 0.1);
     width: 80px;
     height: 80px;
@@ -838,7 +838,7 @@ body {
 
 .category-personality {
     font-size: 1.3rem;
-    color: #8A6DAE;
+    color: #fff;
     margin-bottom: 20px;
     font-weight: 600;
     background-color: rgba(138, 109, 174, 0.1);
@@ -869,7 +869,7 @@ body {
     background-color: #f9f9f9;
     border-radius: 12px;
     text-align: left;
-    border-left: 4px solid #8A6DAE;
+    border-left: 4px solid #fff;
     border-right: 1px solid #eaeaea;
     border-top: 1px solid #eaeaea;
     border-bottom: 1px solid #eaeaea;
