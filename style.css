@@ -574,24 +574,24 @@ body {
     text-align: center;
 }
 
+/* 注意事项长图：按手机宽度等比放大，整张显示*/
 .note-image-container {
-    margin: 20px auto;
-    width: 90%;
-    max-width: 2300px;
-    height: 1000px; /* 初始显示高度 */
+    margin: 16px auto;
+    width: 100%;
+    max-width: 480px;
     border-radius: 15px;
-    overflow: auto; /* 改为auto以支持滚动 */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border: 3px solid #fff;
+    overflow: hidden; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border: 2px solid #fff;
+    background-color: #f8f8f8;
     position: relative;
 }
 
 .note-image {
     width: 100%;
-    height: auto; /* 高度自适应 */
-    min-height: 500px; /* 最小高度 */
-    object-fit: contain; /* 改为contain以完整显示图片 */
+    height: auto; /* 自动等比放大 */
     display: block;
+    object-fit: contain; /* 改为contain以完整显示图片 */
 }
 
 .note-text {
@@ -733,26 +733,23 @@ body {
     color: #444;
 }
 
-/* 主导香调大图片容器 - 允许滚动查看完整图片 */
+/* 主导香调大图：以手机屏款完整显示 */
 .dominant-image-container {
     width: 100%;
-    height: 2300px; /* 初始显示高度 */
-    margin: 1000px auto;
-    border-radius: 15px;
-    overflow: auto; /* 改为auto以支持滚动 */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    border: 3px solid #fff;
+    max-width: 480px; 
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 2px solid #fff;
     background-color: #f8f8f8;
-    position: relative;
 }
 
 .dominant-image {
     width: 100%;
-    height: auto; /* 高度自适应 */
-    min-height: 500px; /* 最小高度 */
-    object-fit: contain; /* 改为contain以完整显示图片 */
-    transition: transform 0.3s ease;
+    height: auto; 
     display: block;
+    object-fit: contain; 
 }
 
 /* 添加滚动条样式 */
