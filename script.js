@@ -64,7 +64,6 @@ const translations = {
     analysisTitle: "香调占比分析",
     recommendationTitle: "个性化推荐",
     suggestionTitle: "调香建议",
-    recipeTitle: "专属配方示例",
     restartTest: "重新测试",
     shareResult: "分享结果",
 
@@ -144,7 +143,6 @@ const translations = {
     analysisTitle: "Fragrance Ratio Analysis",
     recommendationTitle: "Personalized Recommendations",
     suggestionTitle: "Blending Suggestions",
-    recipeTitle: "Custom Formula Example",
     restartTest: "Restart Test",
     shareResult: "Share Results",
 
@@ -203,14 +201,14 @@ const translations = {
     welcomeText:
       "မေးခွန်း ၁၀ ခုဖြင့် သင်၏ရနံ့နှစ်သက်မှုကို ခွဲခြမ်းစိတ်ဖြာပေးပါသည်<br />သင်၏ရွေးချယ်မှုအချိုးအစားပေါ်မူတည်၍ သင့်တော်ဆုံးရနံ့အမျိုးအစားကို အကြံပြုပေးပါသည်",
     feature1: "ရနံ့အမျိုးအစားအချိုးအစားခွဲခြမ်းစိတ်ဖြာခြင်း",
-    feature2: "တစ်ဦးချင်းအကြံပြုချက်များ",
+    feature2: "အကြံပြုချက်များ",
     feature3: "သီးသန့်ရနံ့ပေါင်းစပ်အကြံပြုချက်များ",
     startButton: "စမ်းသပ်မှုစတင်ရန်",
     disclaimerText:
       "စမ်းသပ်မှုသည် ၃-၅ မိနစ်ခန့်ကြာပြီး ဒေတာအားလုံးကို ခွဲခြမ်းစိတ်ဖြာရန်သာအသုံးပြုပါသည်",
     switchToEnglish: "အင်္ဂလိပ်ဘာသာသို့ပြောင်းရန်",
     switchToChinese: "တရုတ်ဘာသာသို့ပြောင်းရန်",
-    switchToBurmese: "Switch to English",
+    switchToBurmese: "မြန်မာဘာသာသို့ပြောင်းရန်",
 
     // 基本信息页面
     back: "ပြန်သွားရန်",
@@ -232,7 +230,6 @@ const translations = {
     analysisTitle: "ရနံ့အမျိုးအစားအချိုးအစားခွဲခြမ်းစိတ်ဖြာခြင်း",
     recommendationTitle: "တစ်ဦးချင်းအကြံပြုချက်များ",
     suggestionTitle: "ရနံ့ပေါင်းစပ်အကြံပြုချက်များ",
-    recipeTitle: "သီးသန့်ဖော်မြူလာနမူနာ",
     restartTest: "ပြန်လည်စမ်းသပ်ရန်",
     shareResult: "ရလဒ်များမျှဝေရန်",
 
@@ -258,19 +255,19 @@ const translations = {
 
     // 推荐文案
     citrusRec:
-      "အကြံပြုထားသော အဆီအနှစ်များ- သံပုရာသီး၊ ဂရိတ်ဖရုသီး၊ ဘာဂါမွတ်သီး၊ မနက်ခင်းလန်းဆန်းစေရန် အသုံးပြုရန်သင့်တော်ပါသည်။ 'မနက်ခင်းနေရောင်ခြည်' သို့မဟုတ် 'သံပုရာချစ်ခြင်း' ဖော်မြူလာများကို စမ်းကြည့်ပါ။",
+      "အကြံပြုထားသော ချဉ်ချိုသစ်သီးရနံ့များ- သံပုရာသီး၊ ကျွဲကောသီး၊ လီမွန်သီး၊ မနက်ခင်းလန်းဆန်းစေရန် အသုံးပြုရန်သင့်တော်ပါသည်။ 'မနက်ခင်းနေရောင်ခြည်' သို့မဟုတ် 'သံပုရာချစ်ခြင်း' ဖော်မြူလာများကို စမ်းကြည့်ပါ။",
     fruityRec:
-      "အကြံပြုထားသော သစ်သီးအခြေခံရနံ့များ- မက်မွန်သီး၊ လိုင်ချီးသီး၊ သရက်သီး၊ နေ့စဉ်အသုံးပြုရန် ဆွဲဆောင်မှုတိုးစေရန်သင့်တော်ပါသည်။ 'မက်မွန်မိန်းကလေး' သို့မဟုတ် 'အပူပိုင်းသစ်သီးဥယျာဉ်' ဖော်မြူလာများကို စမ်းကြည့်ပါ။",
+      "အကြံပြုထားသော သစ်သီးရနံ့များ- မက်မွန်သီး၊ လိုင်ချီးသီး၊ သရက်သီး၊ နေ့စဉ်အသုံးပြုရန် ဆွဲဆောင်မှုတိုးစေရန်သင့်တော်ပါသည်။ 'မက်မွန်မိန်းကလေး' သို့မဟုတ် 'အပူပိုင်းသစ်သီးဥယျာဉ်' ဖော်မြူလာများကို စမ်းကြည့်ပါ။",
     aquaticRec:
-      "အကြံပြုထားသော လန်းဆန်းသောရနံ့များ- ပင်လယ်၊ မိုးရေ၊ ကြာပန်း၊ အလုပ်ပတ်ဝန်းကျင်တွင် အေးဆေးတည်ငြိမ်စွာနေထိုင်ရန် သင့်တော်ပါသည်။ 'မိုးရွာပြီးနောက်မနက်ခင်း' သို့မဟုတ် 'နက်ရှိုင်းသောပင်လယ်လျှို့ဝှက်ချက်' ဖော်မြူလာများကို စမ်းကြည့်ပါ။",
+      "အကြံပြုထားသော ရေထုရနံ့များ- ပင်လယ်၊ မိုးရေ၊ ကြာပန်း၊ အလုပ်ပတ်ဝန်းကျင်တွင် အေးဆေးတည်ငြိမ်စွာနေထိုင်ရန် သင့်တော်ပါသည်။ 'မိုးရွာပြီးနောက်မနက်ခင်း' သို့မဟုတ် 'နက်ရှိုင်းသောပင်လယ်လျှို့ဝှက်ချက်' ဖော်မြူလာများကို စမ်းကြည့်ပါ။",
     greenRec:
-      "အကြံပြုထားသော သဘာဝရနံ့များ- မြက်ခင်း၊ လက်ဖက်ရည်၊ ပူစီနံ၊ အပန်းဖြေအချိန်များတွင် စိတ်ဖြေလျှော့ရန် သင့်တော်ပါသည်။ 'သစ်တောလမ်းလျှောက်ခြင်း' သို့မဟုတ် 'လက်ဖက်ခြံမနက်ခင်း' ဖော်မြူလာများကို စမ်းကြည့်ပါ။",
+      "အကြံပြုထားသော ရွက်စိမ်းရနံ့များ- မြက်ခင်း၊ လက်ဖက်၊ ပူစီနံ၊ အပန်းဖြေအချိန်များတွင် စိတ်ဖြေလျှော့ရန် သင့်တော်ပါသည်။ 'သစ်တောလမ်းလျှောက်ခြင်း' သို့မဟုတ် 'လက်ဖက်ခြံမနက်ခင်း' ဖော်မြူလာများကို စမ်းကြည့်ပါ။",
     orientalRec:
-      "အကြံပြုထားသော ပြင်းထန်သောဟင်းခတ်အမွှေးအကြိုင်များ- ပယင်းရောင်၊ ကြောင်လိပ်အနံ့၊ သစ်ကြံ့ပိုးခေါက်၊ ညနေပွဲများသို့မဟုတ် အထူးအခမ်းအနားများအတွက် သင့်တော်ပါသည်။ 'လျှို့ဝှက်ဆန်းကြယ်သောအရှေ့ဖက်' သို့မဟုတ် 'ည၏ဆွဲဆောင်မှု' ဖော်�မြူလာများကို စမ်းကြည့်ပါ။",
+      "အကြံပြုထားသော အရှေ့တိုင်းရနံ့များ- ပယင်းရောင်၊ မတ်စ်အနံ့၊ သစ်ကြံ့ပိုးခေါက်၊ ညနေပွဲများသို့မဟုတ် အထူးအခမ်းအနားများအတွက် သင့်တော်ပါသည်။ 'လျှို့ဝှက်ဆန်းကြယ်သောအရှေ့ဖက်' သို့မဟုတ် 'ည၏ဆွဲဆောင်မှု' ဖော်မြူလာများကို စမ်းကြည့်ပါ။",
     woodyRec:
-      "အကြံပြုထားသော နွေးထွေးသောသစ်သားများ- စီဒါသစ်၊ စန္ဒကူးသစ်၊ ဗက်တီဗာပင်၊ ဆောင်းရာသီများသို့မဟုတ် တည်ငြိမ်မှုပြသရန်လိုအပ်သောအခမ်းအနားများအတွက် သင့်တော်ပါသည်။ 'ဆောင်းရာသီနွေးထွေးသောသစ်သား' သို့မဟုတ် 'စာကြည့်ခန်းအချိန်' ဖော်မြူလာများကို စမ်းကြည့်ပါ။",
+      "အကြံပြုထားသော သစ်မွှေးရနံ့များ- စီဒါသစ်၊ စန္ဒကူးသစ်၊ ဗက်တီဗာပင်၊ ဆောင်းရာသီများသို့မဟုတ် တည်ငြိမ်မှုပြသရန်လိုအပ်သောအခမ်းအနားများအတွက် သင့်တော်ပါသည်။ 'ဆောင်းရာသီနွေးထွေးသောသစ်သား' သို့မဟုတ် 'စာကြည့်ခန်းအချိန်' ဖော်မြူလာများကို စမ်းကြည့်ပါ။",
     floralRec:
-      "အကြံပြုထားသော ပန်းအခြေခံရနံ့များ- နှင်းဆီ၊ စံပယ်ပန်း၊ လီလီပန်း၊ ချိန်းတွေ့ခြင်းသို့မဟုတ် ချစ်ခြင်းမေတ္တာပြည့်ဝသောအခမ်းအနားများအတွက် သင့်တော်ပါသည်။ 'နှင်းဆီဥယျာဉ်' သို့မဟုတ် 'အဖြူရောင်ပန်းစည်း' ဖော်�မြူလာများကို စမ်းကြည့်ပါ။",
+      "အကြံပြုထားသော ပန်းရနံ့များ- နှင်းဆီ၊ စံပယ်ပန်း၊ လီလီပန်း၊ ချိန်းတွေ့ခြင်းသို့မဟုတ် ချစ်ခြင်းမေတ္တာပြည့်ဝသောအခမ်းအနားများအတွက် သင့်တော်ပါသည်။ 'နှင်းဆီဥယျာဉ်' သို့မဟုတ် 'အဖြူရောင်ပန်းစည်း' ဖော်�မြူလာများကို စမ်းကြည့်ပါ။",
   },
 };
 
@@ -320,23 +317,23 @@ const questions = {
     },
     {
       id: "quiz2",
-      text: '选香时，你更偏爱哪种"第一感觉"？',
+      text: '你更喜欢哪种气味带来的感官体验？',
       options: [
-        { text: "清爽提神，像咬了口冰镇柠檬", category: "柑橘调", icon: "🍊" },
+        { text: "酸中带甜的柑橘果皮香", category: "柑橘调", icon: "🍊" },
         {
-          text: "甜润讨喜，像含着一颗水果硬糖",
+          text: "软糯多汁的热带水果香",
           category: "果香调",
           icon: "🍑",
         },
-        { text: "冷静疏离，像雨后的空气", category: "水生调", icon: "🌊" },
-        { text: "自然清新，像刚剪过的草坪", category: "绿叶调", icon: "🍃" },
+        { text: "潮湿的岩石与水雾气息", category: "水生调", icon: "🌊" },
+        { text: "鲜割的青草与树叶香", category: "绿叶调", icon: "🍃" },
         {
-          text: "浓郁神秘，像藏着故事的香料盒",
+          text: "香草、琥珀与香料的复合浓韵",
           category: "东方调",
           icon: "🎭",
         },
-        { text: "温暖踏实，像冬天的烤火炉", category: "木质调", icon: "🌲" },
-        { text: "温柔浪漫，像收到一束鲜花", category: "花香调", icon: "🌹" },
+        { text: "松针与檀香的干燥木质香", category: "木质调", icon: "🌲" },
+        { text: "多种鲜花交织的馥郁花香", category: "花香调", icon: "🌹" },
       ],
     },
     {
@@ -517,40 +514,40 @@ const questions = {
     },
     {
       id: "quiz2",
-      text: 'When choosing fragrance, which "first impression" do you prefer?',
+      text: 'Which scent do you prefer for the sensory experience?',
       options: [
         {
-          text: "Refreshing and refreshing, like taking a bite of a chilled lemon.",
+          text: "Sour and sweet citrus peel aroma.",
           category: "柑橘调",
           icon: "🍊",
         },
         {
-          text: "Sweet and pleasing, like holding a fruit candy.",
+          text: "Soft waxy and juicy tropical fruit flavor.",
           category: "果香调",
           icon: "🍑",
         },
         {
-          text: "Calm and distant, like the air after rain.",
+          text: "Moist rocks and water mist scent.",
           category: "水生调",
           icon: "🌊",
         },
         {
-          text: "Natural and fresh, like a freshly cut lawn.",
+          text: "Fresh cut green grass and fragrant leaves .",
           category: "绿叶调",
           icon: "🍃",
         },
         {
-          text: "Rich and mysterious, like a spice box hiding a story.",
+          text: "The complex and rich aroma of vanilla, amber, and spices.",
           category: "东方调",
           icon: "🎭",
         },
         {
-          text: "Warm and down-to-earth, like a winter oven.",
+          text: "Dry woody fragrance of pine needles and sandalwood.",
           category: "木质调",
           icon: "🌲",
         },
         {
-          text: "Gentle and romantic, like receiving a bouquet of flowers.",
+          text: "A rich floral fragrance interwoven with various flowers .",
           category: "花香调",
           icon: "🌹",
         },
@@ -599,7 +596,7 @@ const questions = {
     },
     {
       id: "quiz4",
-      text: 'Which of the following "flavor associations" makes you more tempted?',
+      text: 'Which of the following "Flavor associations fragrance group" makes you more tempted?',
       options: [
         {
           text: "Sparkling water, mint, lime.",
@@ -624,7 +621,7 @@ const questions = {
     },
     {
       id: "quiz5",
-      text: 'What do you want perfume to help you "express" at a party?',
+      text: 'What kind of perfume you want to help you express at a party?',
       options: [
         {
           text: "Full of vitality, easily blending into the hustle and bustle.",
@@ -706,7 +703,7 @@ const questions = {
     },
     {
       id: "quiz7",
-      text: 'In the face of the "new perfume", which trait attracted you first?',
+      text: 'When you face the "new perfume", which trait attracted you first?',
       options: [
         {
           text: "Spray it and wake up, instantly full of vitality.",
@@ -873,7 +870,7 @@ const questions = {
   my: [
     {
       id: "quiz1",
-      text: "ပိတ်ရက် နေ့လယ်တွေမှာ အောက်ပါနေရာတွေထဲက ဘယ်လိုနေရာမှာ သင် အပန်းဖြေ အနားယူချင် ပါသလဲ။",
+      text: "ပိတ်ရက် နေ့လည်တွေမှာ အောက်ပါနေရာတွေထဲက ဘယ်လိုနေရာမှာ သင် အပန်းဖြေ အနားယူချင် ပါသလဲ။",
       options: [
         {
           text: "ကော်ဖီဆိုင် အပြင်ဘက်။ (ရေခဲမုန့်ခွက်လေးပေါ် နေရောင်ဖြာကျနေတဲ့ နေရာ)။",
@@ -914,40 +911,40 @@ const questions = {
     },
     {
       id: "quiz2",
-      text: "ရနံ့ရွေးချယ်ရာမှာ ပထမဆုံး စိတ်ထဲဝင်ရောက်လာစေတဲ့ ဘယ်လိုအမြင်မျိုးကို သင်ပိုမိုနှစ်သက် ပါသလဲ။",
+      text: "အာရုံတွင် ခံစားသိရှိမှု အတွက် အောက်ပါ ​မည်သည့်ရနံ့ကို သင် ပိုမို သဘောကျပါသလဲ။",
       options: [
         {
-          text: "သံပယိုရည် အေးအေး တခွက် သောက်လိုက်ရသလို လန်းဆန်းအေးမြတဲ့ အမြင်။",
+          text: "ချဥ်ချို သစ်သီးများ၏ အခွံရနံ့။",
           category: "柑橘调",
           icon: "🍊",
         },
         {
-          text: "သစ်သီးချိုချဉ်လေး စားရသလို ချိုမြိန်ပြီး စိတ်ကြည်နူးဖွယ် အမြင်။",
+          text: "နူးညံ့ချောမွေ့ကာ အရည်ရွှမ်းသော သစ်သီး အရသာ ရနံ့။",
           category: "果香调",
           icon: "🍑",
         },
         {
-          text: "မိုးရွာပြီးစ လေနုအေးလေး တိုက်ခတ်သလို ငြိမ်းချမ်းတဲ့ အမြင်။",
+          text: "စိုစွတ်သော ကျောက်တုံးများနှင့် မြူနှင်းတို့၏ ရနံ့။",
           category: "水生调",
           icon: "🌊",
         },
         {
-          text: "သေချာ ရိတ်သင်ထားတဲ့ သဘာဝ မြက်ခင်းစိမ်းကြီးလို အမြင်။",
+          text: "လတ်ဆတ် လန်းဆန်းသော မြက်ခင်းရနံ့နှင့် ရွက်သစ်နုများ ရနံ့။",
           category: "绿叶调",
           icon: "🍃",
         },
         {
-          text: "လျှို့ဝှက်တဲ့ ဇာတ်ကြောင်းတွေနဲ့ ပြည့်နေတဲ့ သေတ္တာတလုံးလို ပဟေဠိဆန်တဲ့အမြင်။",
+          text: "ရနံ့ကြိုင်လှိုင် မွှေးပျံ့သော ဗနီလာ၊ ကတိုးနံ့နှင့် ဟင်းခတ်အမွှေးကြိုင်များ၏ ရနံ့။",
           category: "东方调",
           icon: "🎭",
         },
         {
-          text: "ဆောင်းရာသီ မီးဖိုကြီးလို နွေးထွေးပြီး လက်တွေ့ဆန်တဲ့ ဘဝအမြင်။",
+          text: "ထင်းရှူးပင်နှင့် စန္ဒကူးပင်တို့၏ သစ်မွှေးရနံ့။",
           category: "木质调",
           icon: "🌲",
         },
         {
-          text: "ပန်းစည်းလေး တစ်စည်းလက်ခံရရှိသလို ညင်သာ ချိုမြိန်တဲ့ အမြင်။",
+          text: "ပန်းပေါင်းစုံတို့၏ ကြိုင်လှိုင် သင်းပျံ့သော ပန်းရနံ့။",
           category: "花香调",
           icon: "🌹",
         },
@@ -958,7 +955,7 @@ const questions = {
       text: "အခြားသူတွေ သင့်ကို ဘယ်လို လူအဖြစ် မှတ်ချက်ပေးတတ် ကြပါသလဲ။",
       options: [
         {
-          text: "သင်ဟာ နေမင်းကြီး တစ်စင်းလို တောက်ပပြီး ပတတ်ဝန်းကျင်ကို လင်းလက်စေသူ။",
+          text: "သင်ဟာ နေမင်းကြီး တစ်စင်းလို တောက်ပပြီး ပတ်ဝန်းကျင်ကို လင်းလက်စေသူ။",
           category: "柑橘调",
           icon: "🍊",
         },
@@ -1013,7 +1010,7 @@ const questions = {
       options: [
         { text: "တက်ကြွပြီး ဆူညံတဲ့ ပတ်ဝန်းကျင်မှာ အလွယ်တကူ ရောနှောနိုင်တဲ့ အသွင်။", category: "柑橘调", icon: "🍊" },
         { text: "ပျော်ပျော် နေတတ်ပြီး လူချစ်လူခင်ပေါတဲ့ လူတွေအနားကပ်ချင်တဲ့ သူမျိုးအသွင်။", category: "果香调", icon: "🍑" },
-        { text: "တဦးတည်း သီးသန့် အေးအေးဆေးဆေး နေတတ်တဲ့ အသွင်။", category: "水生调", icon: "🌊" },
+        { text: "တစ်ဦးတည်း သီးသန့် အေးအေးဆေးဆေး နေတတ်တဲ့ အသွင်။", category: "水生调", icon: "🌊" },
         { text: "လွတ်လပ်ပြီး အထိန်းအကွပ်မရှိတဲ့ အသွင်။", category: "绿叶调", icon: "🍃" },
         { text: "ထူးခြား ထင်ပေါ်ပြီး လူအများကြား အာရုံစိုက်ခံရတဲ့ အသွင်။", category: "东方调", icon: "🎭" },
         { text: "တည်ငြိမ် ရင့်ကျက်ပြီး ယုံကြည်လို့ရသူ အသွင်။", category: "木质调", icon: "🌲" },
@@ -1094,7 +1091,7 @@ const categories = {
     name: {
       zh: "柑橘调",
       en: "Citrus",
-      my: "သံပုရာအနံ့"
+      my: "ချဉ်ချို သစ်သီးရနံ့"
     },
     icon: "🍊",
     color: "#FFA726",
@@ -1111,8 +1108,8 @@ const categories = {
     },
     recommendedScents: {
       zh: ["柠檬", "柚子", "佛手柑", "橙", "葡萄柚"],
-      en: ["Lemon", "Grapefruit", "Bergamot", "Orange", "Pomelo"],
-      my: ["သံပုရာသီး", "ဂရိတ်ဖရုသီး", "ဘာဂါမွတ်သီး", "လိမ္မော်သီး", "ပရိစ်တော်သီး"],
+      en: ["Lemon", "Pomelo", "Bergamot", "Orange", "Grapefruit"],
+      my: ["သံပုရာသီး", "ကျွဲကောသီး", "လီမွန်သီး", "လိမ္မော်သီး", "ဆန်းခစ်သီး"],
     },
     bestFor: {
       zh: ["早晨", "运动", "工作日", "夏季"],
@@ -1124,7 +1121,7 @@ const categories = {
     name: {
       zh: "果香调",
       en: "Fruity",
-      my: "သစ်သီးအနံ့"
+      my: "သစ်သီးရနံ့"
     },
     icon: "🍑",
     color: "#FF4081",
@@ -1154,7 +1151,7 @@ const categories = {
     name: {
       zh: "水生调",
       en: "Aquatic",
-      my: "ရေသတ္တဝါအနံ့"
+      my: "ရေထုရနံ့"
     },
     icon: "🌊",
     color: "#29B6F6",
@@ -1184,7 +1181,7 @@ const categories = {
     name: {
       zh: "绿叶调",
       en: "Green",
-      my: "အစိမ်းရောင်အနံ့"
+      my: "ရွက်စိမ်းရနံ့"
     },
     icon: "🍃",
     color: "#66BB6A",
@@ -1202,7 +1199,7 @@ const categories = {
     recommendedScents: {
       zh: ["青草", "茶叶", "薄荷", "罗勒", "无花果叶"],
       en: ["Grass", "Tea", "Mint", "Basil", "Fig Leaf"],
-      my: ["မြက်ခင်း", "လက်ဖက်ရည်", "ပူစီနံ", "ပင်စိမ်း", "သဖန်းရွက်"],
+      my: ["မြက်ခင်း", "လက်ဖက်", "ပူစီနံ", "ပင်စိမ်း", "သဖန်းရွက်"],
     },
     bestFor: {
       zh: ["休闲", "旅行", "户外活动", "春夏"],
@@ -1214,7 +1211,7 @@ const categories = {
     name: {
       zh: "东方调",
       en: "Oriental",
-      my: "အရှေ့တိုင်းအနံ့"
+      my: "အရှေ့တိုင်းရနံ့"
     },
     icon: "🎭",
     color: "#AB47BC",
@@ -1232,7 +1229,7 @@ const categories = {
     recommendedScents: {
       zh: ["琥珀", "麝香", "香草", "肉桂", "乳香"],
       en: ["Amber", "Musk", "Vanilla", "Cinnamon", "Frankincense"],
-      my: ["ပယင်းရောင်", "ကြောင်လိပ်အနံ့", "ဗနီလာ", "သစ်ကြံ့ပိုးခေါက်", "သစ်ကြံ့ပိုးစေးနံ"],
+      my: ["ပယင်းရောင်", "မတ်စ်အနံ့", "ဗနီလာ", "သစ်ကြံ့ပိုးခေါက်", "သစ်ကြံ့ပိုးစေးနံ့"],
     },
     bestFor: {
       zh: ["晚宴", "特殊场合", "冬季", "夜间"],
@@ -1244,7 +1241,7 @@ const categories = {
     name: {
       zh: "木质调",
       en: "Woody",
-      my: "သစ်သားအနံ့"
+      my: "သစ်မွှေးရနံ့"
     },
     icon: "🌲",
     color: "#8D6E63",
@@ -1274,7 +1271,7 @@ const categories = {
     name: {
       zh: "花香调",
       en: "Floral",
-      my: "ပန်းအနံ့"
+      my: "ပန်းရနံ့"
     },
     icon: "🌹",
     color: "#EC407A",
@@ -1311,7 +1308,7 @@ const perfumeRecipes = {
       note: { zh: "前调", en: "Top Note", my: "အရင်ဆုံးအနံ့" },
     },
     {
-      name: { zh: "佛手柑", en: "Bergamot", my: "ဘာဂါမွတ်သီး" },
+      name: { zh: "佛手柑", en: "Bergamot", my: "လီမွန်သီး" },
       percentage: "30%",
       note: { zh: "前调", en: "Top Note", my: "အရင်ဆုံးအနံ့" },
     },
@@ -1321,14 +1318,14 @@ const perfumeRecipes = {
       note: { zh: "中调", en: "Middle Note", my: "အလယ်အလတ်အနံ့" },
     },
     {
-      name: { zh: "白麝香", en: "White Musk", my: "အဖြူရောင်ကြောင်လိပ်အနံ့" },
+      name: { zh: "白麝香", en: "White Musk", my: "အဖြူရောမတ်စ်အနံ့" },
       percentage: "10%",
       note: { zh: "后调", en: "Base Note", my: "နောက်ဆုံးအနံ့" },
     },
   ],
   果香调: [
     {
-      name: { zh: "水蜜桃", en: "Peach", my: "ရေမက်မွန်သီး" },
+      name: { zh: "水蜜桃", en: "Peach", my: "မက်မွန်သီး" },
       percentage: "35%",
       note: { zh: "前调", en: "Top Note", my: "အရင်ဆုံးအနံ့" },
     },
@@ -1377,7 +1374,7 @@ const perfumeRecipes = {
       note: { zh: "前调", en: "Top Note", my: "အရင်ဆုံးအနံ့" },
     },
     {
-      name: { zh: "茶叶", en: "Tea", my: "လက်ဖက်ရည်" },
+      name: { zh: "茶叶", en: "Tea", my: "လက်ဖက်" },
       percentage: "30%",
       note: { zh: "中调", en: "Middle Note", my: "အလယ်အလတ်အနံ့" },
     },
@@ -1431,7 +1428,7 @@ const perfumeRecipes = {
       note: { zh: "中调", en: "Middle Note", my: "အလယ်အလတ်အနံ့" },
     },
     {
-      name: { zh: "麝香", en: "Musk", my: "ကြောင်လိပ်အနံ့" },
+      name: { zh: "麝香", en: "Musk", my: "မတ်စ်အနံ့" },
       percentage: "20%",
       note: { zh: "后调", en: "Base Note", my: "နောက်ဆုံးအနံ့" },
     },
@@ -1453,7 +1450,7 @@ const perfumeRecipes = {
       note: { zh: "中调", en: "Middle Note", my: "အလယ်အလတ်အနံ့" },
     },
     {
-      name: { zh: "麝香", en: "Musk", my: "ကြောင်လိပ်အနံ့" },
+      name: { zh: "麝香", en: "Musk", my: "မတ်စ်အနံ့" },
       percentage: "10%",
       note: { zh: "后调", en: "Base Note", my: "နောက်ဆုံးအနံ့" },
     },
@@ -1660,7 +1657,7 @@ function showNotePage() {
   noteImage.src = noteImages[currentLanguage];
   noteImage.alt = currentLanguage === "zh" ? "注意事项" : 
                   currentLanguage === "en" ? "Important Notes" : 
-                  "သတိပြုရမည့်အချက်များ";
+                  "သတိပြုချက်များ";
   
   // 显示页面
   navigateTo("note");
@@ -2069,7 +2066,7 @@ function updateScorePreview() {
       } else if (currentLanguage === "en") {
         questionText = "Q";
       } else {
-        questionText = "မ";
+        questionText = "မှတ်";
       }
       
       previewDiv.innerHTML = `
@@ -2094,7 +2091,7 @@ function getCategoryInfo(category) {
           ? "独特个性的香气选择"
           : currentLanguage === "en"
           ? "Unique and personal fragrance choice"
-          : "ထူးခြားသောပုဂ္ဂိုလ်ရေးရနံ့ရွေးချယ်မှု",
+          : "ထူးခြားသော ကိုယ်ပိုင်ရနံ့ရွေးချယ်မှု",
       personality: currentLanguage === "zh" ? "个性型" : currentLanguage === "en" ? "Unique Type" : "ထူးခြားသောအမျိုးအစား",
       detailedDesc:
         currentLanguage === "zh"
@@ -2201,7 +2198,7 @@ function calculateResults() {
     } else if (currentLanguage === "en") {
       questionText = "Q";
     } else {
-      questionText = "မ";
+      questionText = "မှတ်";
     }
 
     dominantContainer.innerHTML += `
@@ -2285,7 +2282,7 @@ function renderScoreChart(percentages) {
       } else if (currentLanguage === "en") {
         questionText = "Q";
       } else {
-        questionText = "မ";
+        questionText = "မှတ်";
       }
       
       detailItem.innerHTML = `
@@ -2442,7 +2439,7 @@ function renderSuggestions(percentages) {
                     ? `你对${categoryNames}都有兴趣，可以尝试将这些香调巧妙融合，创造独特的复合香型。`
                     : currentLanguage === "en"
                     ? `You are interested in ${categoryNames}, you can try to skillfully blend these fragrances to create unique compound scents.`
-                    : `သင်သည် ${categoryNames}ကိုစိတ်ဝင်စားပါသည်၊ ထူးခြားသောရောနှောရနံ့များဖန်တီးရန်ဤရနံ့များကိုကျွမ်းကျင်စွာရောစပ်နိုင်ပါသည်။`
+                    : `သင်သည် ${categoryNames}ကိုစိတ်ဝင်စားပါသည်၊ ထူးခြားသောရနံ့များဖန်တီးရန်ဤရနံ့များကိုကျွမ်းကျင်စွာရောစပ်နိုင်ပါသည်။`
                 }</p>
             </div>
         `;
@@ -2465,7 +2462,7 @@ function renderSuggestions(percentages) {
                     ? `你的主导香调特别适合：${bestForText}等场合。`
                     : currentLanguage === "en"
                     ? `Your dominant fragrance is particularly suitable for occasions such as: ${bestForText}.`
-                    : `သင်၏အဓိကရနံ့သည်အထူးသဖြင့်သင့်တော်ပါသည်- ${bestForText}စသည့်အခမ်းအနားများ။`
+                    : `သင်ရနံ့အထူးသင့်တော်သောရှုမြင်ကွင်းမှာ- ${bestForText}စသည်တို့ဖြစ်သည်။`
                 }</p>
             `;
       container.appendChild(item);
@@ -2512,7 +2509,7 @@ function renderRecipeExample(dominantCategories) {
                         ? "建议配比仅供参考，可根据个人喜好调整。前调持续约15分钟，中调约2-4小时，后调可持续一整天。"
                         : currentLanguage === "en"
                         ? "Suggested ratios are for reference only and can be adjusted according to personal preference. Top notes last about 15 minutes, middle notes about 2-4 hours, and base notes can last all day."
-                        : "အကြံပြုထားသောအချိုးအစားများသည်ကိုးကားရန်သာဖြစ်ပြီးပုဂ္ဂိုလ်ရေးနှစ်သက်မှုအရညီလျှော့ချိန်ညှိနိုင်ပါသည်။ အရင်ဆုံးအနံ့များသည် ၁၅ မိနစ်ခန့်ကြာသည်၊ အလယ်အလတ်အနံ့များသည် ၂-၄ နာရီခန့်ကြာပြီးနောက်ဆုံးအနံ့များသည်တစ်နေ့လုံးကြာနိုင်ပါသည်။"
+                        : "အကြံပြုထားသောအချိုးအစားများသည်ကိုးကားရန်သာဖြစ်ပြီးကိုယ်ပိုင်နှစ်သက်မှုအရညီလျှော့ချိန်ညှိနိုင်ပါသည်။ အရင်ဆုံးအနံ့များသည် ၁၅ မိနစ်ခန့်ကြာသည်၊ အလယ်အလတ်အနံ့များသည် ၂-၄ နာရီခန့်ကြာပြီးနောက်ဆုံးအနံ့များသည်တစ်နေ့လုံးကြာနိုင်ပါသည်။"
                     }
                 </p>
             `;
