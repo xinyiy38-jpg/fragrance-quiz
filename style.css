@@ -1284,3 +1284,8 @@ body {
     display: none !important;
 }
 
+/* 隐藏“当前香调分布”预览板块（中英缅通用） */
+.score-summary {
+    display: none !important;
+}
+
