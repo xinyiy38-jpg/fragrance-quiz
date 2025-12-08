@@ -7,9 +7,9 @@
 }
 
 :root {
-    --primary-color: #8a6dae;
-    --secondary-color: #ffb6c1;
-    --accent-color: #64b5f6;
+    --primary-color: #dcc8dc;
+    --secondary-color: #f5edf7;
+    --accent-color: #e8d8eb;
     --text-color: #333;
     --light-bg: #f9f7fd;
     --card-bg: white;
@@ -599,7 +599,7 @@ body {
     padding: 15px;
     background-color: #f9f9f9;
     border-radius: 8px;
-    border-left: 4px solid #8A6DAE;
+    border-left: 4px solid #dcc8dc;
 }
 
 .note-text p {
@@ -743,6 +743,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     border: 2px solid #fff;
     background-color: #f8f8f8;
+    position: relative;
 }
 
 .dominant-image {
@@ -773,7 +774,7 @@ body {
 
 .dominant-image-container::-webkit-scrollbar-thumb:hover,
 .note-image-container::-webkit-scrollbar-thumb:hover {
-    background: #7b5fa8;
+    background: #c3aacc;
 }
 
 /* 添加提示文字，告诉用户可以滚动 */
@@ -824,7 +825,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 10px auto;
-    border: 3px solid #8A6DAE;
+    border: 3px solid #dcc8dc;
 }
 
 .category-name {
@@ -845,7 +846,7 @@ body {
     padding: 8px 20px;
     border-radius: 25px;
     display: inline-block;
-    border: 1px dashed #8A6DAE;
+    border: 1px dashed #dcc8dc;
 }
 
 .category-score {
@@ -853,7 +854,7 @@ body {
     font-weight: bold;
     color: #fff;
     padding: 10px 25px;
-    background: linear-gradient(135deg, #8A6DAE, #6C4B8A);
+    background: linear-gradient(135deg, #dcc8dc, #c7b0c8);
     border-radius: 30px;
     display: inline-block;
     margin: 20px 0;
@@ -1069,7 +1070,7 @@ body {
 
 .share-option:hover {
     transform: translateY(-2px);
-    background: #e8e4f7;
+    background: #f1e7f4;
 }
 
 .share-option i {
