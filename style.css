@@ -1277,3 +1277,28 @@ body {
     vertical-align: middle;
     margin-right: 8px;
 }
+
+/* 1. 隐藏“结果页面”顶部的大标题和下面的小语言切换按钮（所有语言） */
+#resultPage .result-header,
+#resultPage .language-switch-bottom {
+    display: none;
+}
+
+#notePage .result-header {
+    display: none;
+}
+
+/* 2. 让“香型性格大图”和“注意事项长图”全部显示，不要裁剪 */
+.dominant-image-container,
+.note-image-container {
+    height: auto !important;     /* 取消固定高度 */
+}
+
+.dominant-image,
+.note-image {
+    min-height: 0 !important;    /* 取消最小高度限制 */
+    height: auto !important;     /* 按图片比例自动拉伸 */
+    width: 100%;                 /* 宽度铺满卡片 */
+    object-fit: contain;         /* 保证整张图完整显示，不被裁掉 */
+}
+
