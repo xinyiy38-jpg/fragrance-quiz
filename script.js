@@ -1758,7 +1758,6 @@ function updateUITexts() {
   document.getElementById("recommendationTitle").textContent =
     lang.recommendationTitle;
   document.getElementById("suggestionTitle").textContent = lang.suggestionTitle;
-  document.getElementById("recipeTitle").textContent = lang.recipeTitle;
   document.getElementById("restartText").textContent = lang.restartTest;
   document.getElementById("shareText").textContent = lang.shareResult;
 
@@ -2226,9 +2225,6 @@ function calculateResults() {
   // 显示调香建议
   renderSuggestions(scorePercentages);
 
-  // 显示配方示例
-  renderRecipeExample(dominantCategories.map(([cat]) => cat));
-
   // 发送数据到Google Sheets（如果尚未发送）
   if (!hasSentData) {
     sendResultsToGoogleSheets(dominantCategories);
@@ -2468,54 +2464,6 @@ function renderSuggestions(percentages) {
       container.appendChild(item);
     }
   }
-}
-
-// 渲染配方示例
-function renderRecipeExample(dominantCategories) {
-  const container = document.getElementById("recipeExample");
-  container.innerHTML = "";
-
-  dominantCategories.forEach((category) => {
-    if (perfumeRecipes[category]) {
-      const recipeDiv = document.createElement("div");
-      
-      let recipeTitle = "";
-      if (currentLanguage === "zh") {
-        recipeTitle = "基础配方";
-      } else if (currentLanguage === "en") {
-        recipeTitle = "Basic Formula";
-      } else {
-        recipeTitle = "အခြေခံဖော်မြူလာ";
-      }
-      
-      recipeDiv.innerHTML = `
-                <h4>${getCategoryInfo(category).name} ${recipeTitle}</h4>
-                <div class="recipe-items">
-                    ${perfumeRecipes[category]
-                      .map(
-                        (item) => `
-                        <div class="recipe-item">
-                            <div style="font-weight: bold;">${item.name[currentLanguage]}</div>
-                            <div style="color: #666; font-size: 0.9rem;">${item.percentage}</div>
-                            <div style="color: #888; font-size: 0.8rem;">${item.note[currentLanguage]}</div>
-                        </div>
-                    `,
-                      )
-                      .join("")}
-                </div>
-                <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
-                    ${
-                      currentLanguage === "zh"
-                        ? "建议配比仅供参考，可根据个人喜好调整。前调持续约15分钟，中调约2-4小时，后调可持续一整天。"
-                        : currentLanguage === "en"
-                        ? "Suggested ratios are for reference only and can be adjusted according to personal preference. Top notes last about 15 minutes, middle notes about 2-4 hours, and base notes can last all day."
-                        : "အကြံပြုထားသောအချိုးအစားများသည်ကိုးကားရန်သာဖြစ်ပြီးကိုယ်ပိုင်နှစ်သက်မှုအရညီလျှော့ချိန်ညှိနိုင်ပါသည်။ အရင်ဆုံးအနံ့များသည် ၁၅ မိနစ်ခန့်ကြာသည်၊ အလယ်အလတ်အနံ့များသည် ၂-၄ နာရီခန့်ကြာပြီးနောက်ဆုံးအနံ့များသည်တစ်နေ့လုံးကြာနိုင်ပါသည်။"
-                    }
-                </p>
-            `;
-      container.appendChild(recipeDiv);
-    }
-  });
 }
 
 // 重新开始测试
