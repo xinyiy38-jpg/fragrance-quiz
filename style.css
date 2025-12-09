@@ -1280,11 +1280,6 @@ body {
     margin-right: 8px;
 }
 
-/* 完全隐藏“专属配方示例”板块（中英缅通用） */
-.recipe-card {
-    display: none !important;
-}
-
 /* 隐藏“当前香调分布”预览板块（中英缅通用） */
 .score-summary {
     display: none !important;
