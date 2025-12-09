@@ -198,6 +198,13 @@
                     </div>
                 </div>
 
+                <!-- ⭐ 新增：选项容器，JS 会往这里插入每一题的选项 -->
+                <div id="optionsContainer" class="options-container"></div>
+
+                <!-- ⭐（可选，但建议加）分数预览容器，给 updateScorePreview() 用 -->
+                <div id="scorePreview" class="score-preview"></div>
+            </div>
+
                 <div class="page-footer">
                     <button id="nextBtn" class="btn-secondary" disabled>
                         <span id="nextText">下一题</span>
