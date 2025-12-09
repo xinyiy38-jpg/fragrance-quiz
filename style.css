@@ -7,11 +7,11 @@
 }
 
 :root {
-    --primary-color: #dcc8dc;
-    --secondary-color: #f5edf7;
-    --accent-color: #e8d8eb;
+    --primary-color: #d973ae;
+    --secondary-color: #f0b1d6;
+    --accent-color: #f7c8e2;
     --text-color: #333;
-    --light-bg: #f9f7fd;
+    --light-bg: #fdf2f8;
     --card-bg: white;
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     --border-radius: 16px;
@@ -19,7 +19,7 @@
 
 body {
     font-family: "Noto Sans SC", sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    background: linear-gradient(135deg, #fdf2f8 0%, #f9d1e5 100%);
     color: var(--text-color);
     min-height: 100vh;
     line-height: 1.6;
@@ -123,8 +123,8 @@ body {
     border-color: var(--primary-color);
     background: linear-gradient(
         to right,
-        rgba(138, 109, 174, 0.1),
-        rgba(138, 109, 174, 0.05)
+        rgba(217, 115, 174, 0.12),
+        rgba(240, 177, 214, 0.08)
     );
 }
 
@@ -260,12 +260,12 @@ body {
 .btn-primary {
     background: linear-gradient(135deg, var(--primary-color), #ffffff);
     color: white;
-    box-shadow: 0 4px 15px rgba(220, 200, 220, 0.3);/* 更换阴影为新主色 */
+    box-shadow: 0 4px 15px rgba(217, 115, 174, 0.3); /* 阴影颜色改成新主色 d973ae 的 RGBA */
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(220, 200, 220, 0.4);
+    box-shadow: 0 6px 20px rgba(217, 115, 174, 0.4);
 }
 
 .btn-primary:disabled {
@@ -448,8 +448,8 @@ body {
     border-color: var(--primary-color);
     background: linear-gradient(
         to right,
-        rgba(220, 200, 220, 0.1),
-        rgba(220, 200, 220, 0.05)
+        rgba(217, 115, 174, 0.12),
+        rgba(240, 177, 214, 0.06)
     );
     color: var(--primary-color);
 }
@@ -514,8 +514,8 @@ body {
     border-color: var(--primary-color);
     background: linear-gradient(
         135deg,
-        rgba(220, 200, 220, 0.1),
-        rgba(100, 181, 246, 0.05)
+        rgba(217, 115, 174, 0.12),
+        rgba(247, 200, 226, 0.08)
     );
 }
 
@@ -545,18 +545,6 @@ body {
     border-radius: 12px;
 }
 
-.current-score h4 {
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-.score-preview {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 15px;
-}
-
 .category-preview {
     display: flex;
     align-items: center;
@@ -574,24 +562,32 @@ body {
     text-align: center;
 }
 
-/* 注意事项长图：按手机宽度等比放大，整张显示*/
+/* 注意事项页面样式 */
+.note-content {
+    padding: 0;              /* 减少内边距，让图片更贴近顶部 */
+    text-align: center;
+}
+
+/* 注意事项长图：铺满屏幕宽度，类似“整张图展示” */
 .note-image-container {
-    margin: 16px auto;
-    width: 100%;
-    max-width: 480px;
-    border-radius: 15px;
-    overflow: hidden; 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    border: 2px solid #fff;
-    background-color: #f8f8f8;
+    /* 抵消 .container 的 padding:20px，让图片拉到屏幕左右边缘 */
+    margin: 0 -20px 16px;
+    width: calc(100% + 40px);
+    max-width: none;         /* 不再限制 480px，上限就是屏幕宽度 */
+    
+    border-radius: 0;        /* 去掉圆角卡片效果 */
+    overflow: hidden;
+    box-shadow: none;        /* 去掉阴影，跟参考图一样干净 */
+    border: none;
+    background-color: transparent;
     position: relative;
 }
 
 .note-image {
     width: 100%;
-    height: auto; /* 自动等比放大 */
+    height: auto;            /* 等比例缩放 */
     display: block;
-    object-fit: contain; /* 改为contain以完整显示图片 */
+    object-fit: contain;
 }
 
 .note-text {
@@ -599,7 +595,7 @@ body {
     padding: 15px;
     background-color: #f9f9f9;
     border-radius: 8px;
-    border-left: 4px solid #dcc8dc;
+    border-left: 4px solid #d973ae;
 }
 
 .note-text p {
@@ -655,8 +651,8 @@ body {
 }
 
 .checkbox-container input:checked ~ .checkmark {
-    background-color: #fff;
-    border-color: #ccc;
+    background-color: #d973ae;
+    border-color: #d973ae;
 }
 
 .checkmark:after {
@@ -733,24 +729,26 @@ body {
     color: #444;
 }
 
-/* 主导香调大图：以手机屏款完整显示 */
+/* 结果页香型性格图：整张图铺满屏幕宽度 */
 .dominant-image-container {
-    width: 100%;
-    max-width: 480px; 
-    margin: 20px auto;
-    border-radius: 20px;
-    overflow: hidden; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-    border: 2px solid #fff;
-    background-color: #f8f8f8;
+    /* 同样抵消 .container 的左右 padding，让图片占满屏宽 */
+    margin: 12px -20px 20px;
+    width: calc(100% + 40px);
+    max-width: none;
+
+    border-radius: 0;        /* 不要圆角卡片 */
+    overflow: hidden;
+    box-shadow: none;        /* 不要阴影 */
+    border: none;
+    background-color: transparent;
     position: relative;
 }
 
 .dominant-image {
     width: 100%;
-    height: auto; 
+    height: auto;
     display: block;
-    object-fit: contain; 
+    object-fit: contain;
 }
 
 /* 添加滚动条样式 */
@@ -805,11 +803,11 @@ body {
     text-align: center;
     padding: 25px;
     border-radius: 15px;
-    background: linear-gradient(145deg, #ffffff, #f8f8f8);
-    box-shadow: 0 8px 25px rgba(220, 200, 220, 0.1);
+    background: linear-gradient(145deg, #ffffff, #fdf2f8);
+    box-shadow: 0 8px 25px rgba(217, 115, 174, 0.12);
     width: 90%;
     max-width: 500px;
-    border: 1px solid #eaeaea;
+    border: 1px solid #f3d6e7;
     margin: 0 auto;
 }
 
@@ -817,7 +815,7 @@ body {
     font-size: 3.5rem;
     margin: 15px 0;
     color: #fff;
-    background-color: rgba(220, 200, 220, 0.1);
+    background-color: rgba(217, 115, 174, 0.18);
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -825,7 +823,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 10px auto;
-    border: 3px solid #dcc8dc;
+    border: 3px solid #f0b1d6;
 }
 
 .category-name {
@@ -842,11 +840,11 @@ body {
     color: #fff;
     margin-bottom: 20px;
     font-weight: 600;
-    background-color: rgba(220, 200, 220, 0.1);
+    background-color: rgba(217, 115, 174, 0.35);
     padding: 8px 20px;
     border-radius: 25px;
     display: inline-block;
-    border: 1px dashed #dcc8dc;
+    border: 1px dashed #f0b1d6;
 }
 
 .category-score {
@@ -854,11 +852,11 @@ body {
     font-weight: bold;
     color: #fff;
     padding: 10px 25px;
-    background: linear-gradient(135deg, #dcc8dc, #e8d8eb);
+    background: linear-gradient(135deg, #d973ae, #f0b1d6);
     border-radius: 30px;
     display: inline-block;
     margin: 20px 0;
-    box-shadow: 0 4px 15px rgba(220, 200, 220, 0.3);
+    box-shadow: 0 4px 15px rgba(217, 115, 174, 0.3);
 }
 
 .category-description {
@@ -945,7 +943,7 @@ body {
 .detail-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    background-color: rgba(220, 200, 220, 0.05);
+    background-color: rgba(217, 115, 174, 0.05);
 }
 
 .detail-item > div:first-child {
@@ -1070,7 +1068,7 @@ body {
 
 .share-option:hover {
     transform: translateY(-2px);
-    background: #f5edf7;
+    background:rgba(240, 177, 214, 0.25); /* #f0b1d6 的浅版 */
 }
 
 .share-option i {
@@ -1279,9 +1277,3 @@ body {
     vertical-align: middle;
     margin-right: 8px;
 }
-
-/* 隐藏“当前香调分布”预览板块（中英缅通用） */
-.score-summary {
-    display: none !important;
-}
-
