@@ -260,12 +260,12 @@ body {
 .btn-primary {
     background: linear-gradient(135deg, var(--primary-color), #ffffff);
     color: white;
-    box-shadow: 0 4px 15px rgba(138, 109, 174, 0.3);
+    box-shadow: 0 4px 15px rgba(220, 200, 220, 0.3);/* 更换阴影为新主色 */
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(138, 109, 174, 0.4);
+    box-shadow: 0 6px 20px rgba(220, 200, 220, 0.4);
 }
 
 .btn-primary:disabled {
@@ -448,8 +448,8 @@ body {
     border-color: var(--primary-color);
     background: linear-gradient(
         to right,
-        rgba(138, 109, 174, 0.1),
-        rgba(138, 109, 174, 0.05)
+        rgba(220, 200, 220, 0.1),
+        rgba(220, 200, 220, 0.05)
     );
     color: var(--primary-color);
 }
@@ -514,7 +514,7 @@ body {
     border-color: var(--primary-color);
     background: linear-gradient(
         135deg,
-        rgba(138, 109, 174, 0.1),
+        rgba(220, 200, 220, 0.1),
         rgba(100, 181, 246, 0.05)
     );
 }
@@ -806,7 +806,7 @@ body {
     padding: 25px;
     border-radius: 15px;
     background: linear-gradient(145deg, #ffffff, #f8f8f8);
-    box-shadow: 0 8px 25px rgba(138, 109, 174, 0.1);
+    box-shadow: 0 8px 25px rgba(220, 200, 220, 0.1);
     width: 90%;
     max-width: 500px;
     border: 1px solid #eaeaea;
@@ -817,7 +817,7 @@ body {
     font-size: 3.5rem;
     margin: 15px 0;
     color: #fff;
-    background-color: rgba(138, 109, 174, 0.1);
+    background-color: rgba(220, 200, 220, 0.1);
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -842,7 +842,7 @@ body {
     color: #fff;
     margin-bottom: 20px;
     font-weight: 600;
-    background-color: rgba(138, 109, 174, 0.1);
+    background-color: rgba(220, 200, 220, 0.1);
     padding: 8px 20px;
     border-radius: 25px;
     display: inline-block;
@@ -854,11 +854,11 @@ body {
     font-weight: bold;
     color: #fff;
     padding: 10px 25px;
-    background: linear-gradient(135deg, #dcc8dc, #c7b0c8);
+    background: linear-gradient(135deg, #dcc8dc, #e8d8eb);
     border-radius: 30px;
     display: inline-block;
     margin: 20px 0;
-    box-shadow: 0 4px 15px rgba(138, 109, 174, 0.3);
+    box-shadow: 0 4px 15px rgba(220, 200, 220, 0.3);
 }
 
 .category-description {
@@ -945,7 +945,7 @@ body {
 .detail-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    background-color: rgba(138, 109, 174, 0.05);
+    background-color: rgba(220, 200, 220, 0.05);
 }
 
 .detail-item > div:first-child {
@@ -1070,7 +1070,7 @@ body {
 
 .share-option:hover {
     transform: translateY(-2px);
-    background: #f1e7f4;
+    background: #f5edf7;
 }
 
 .share-option i {
