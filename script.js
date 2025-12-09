@@ -1744,26 +1744,53 @@ function updateUITexts() {
   document.getElementById("backText2").textContent = lang.back;
   document.getElementById("quizTitle").textContent = lang.quizTitle;
   document.getElementById("questionNumberText").textContent = lang.questionText;
-  document.getElementById("questionNumberText2").textContent =
-    lang.questionText2;
-  document.getElementById("scoreTitle").textContent = lang.scoreTitle;
+  document.getElementById("questionNumberText2").textContent = lang.questionText2;
+
+  const scoreTitleEl = document.getElementById("scoreTitle");
+  if (scoreTitleEl) {
+    scoreTitleEl.textContent = lang.scoreTitle;
+  }
+
   document.getElementById("nextText").textContent = lang.nextQuestion;
   document.getElementById("submitText").textContent = lang.submitQuiz;
 
   // 更新结果页面
-  document.getElementById("resultTitle").textContent = lang.resultTitle;
-  document.getElementById("resultSubtitle").textContent = lang.resultSubtitle;
-  document.getElementById("dominantTitle").textContent = lang.dominantTitle;
-  document.getElementById("analysisTitle").textContent = lang.analysisTitle;
-  document.getElementById("recommendationTitle").textContent =
-    lang.recommendationTitle;
-  document.getElementById("suggestionTitle").textContent = lang.suggestionTitle;
-  document.getElementById("restartText").textContent = lang.restartTest;
-  document.getElementById("shareText").textContent = lang.shareResult;
+  const resultTitleEl = document.getElementById("resultTitle");
+  if (resultTitleEl) resultTitleEl.textContent = lang.resultTitle;
 
+  const resultSubtitleEl = document.getElementById("resultSubtitle");
+  if (resultSubtitleEl) resultSubtitleEl.textContent = lang.resultSubtitle;
+
+  const dominantTitleEl = document.getElementById("dominantTitle");
+  if (dominantTitleEl) dominantTitleEl.textContent = lang.dominantTitle;
+
+  const analysisTitleEl = document.getElementById("analysisTitle");
+  if (analysisTitleEl) {
+    analysisTitleEl.textContent = lang.analysisTitle;
+  }
+
+  const recommendationTitleEl = document.getElementById("recommendationTitle");
+  if (recommendationTitleEl) {
+    recommendationTitleEl.textContent = lang.recommendationTitle;
+  }
+
+  const suggestionTitleEl = document.getElementById("suggestionTitle");
+  if (suggestionTitleEl) {
+    suggestionTitleEl.textContent = lang.suggestionTitle;
+  }
+
+  const restartTextEl = document.getElementById("restartText");
+  if (restartTextEl) restartTextEl.textContent = lang.restartTest;
+
+  const shareTextEl = document.getElementById("shareText");
+  if (shareTextEl) shareTextEl.textContent = lang.shareResult;
+  
   // 更新分享模态框
-  document.getElementById("shareModalTitle").textContent = lang.shareModalTitle;
-  document.getElementById("copyLinkText").textContent = lang.copyLink;
+  const shareModalTitleEl = document.getElementById("shareModalTitle");
+  if (shareModalTitleEl) shareModalTitleEl.textContent = lang.shareModalTitle;
+
+  const copyLinkTextEl = document.getElementById("copyLinkText");
+  if (copyLinkTextEl) copyLinkTextEl.textContent = lang.copyLink;
 }
 
 // 渲染基本信息问题
@@ -1964,6 +1991,10 @@ function loadQuestion() {
 
   // 渲染选项
   const optionsContainer = document.getElementById("optionsContainer");
+  if (!optionsContainer) {
+  console.warn("optionsContainer 元素不存在");
+  return;
+}
   optionsContainer.innerHTML = "";
 
   question.options.forEach((option, index) => {
@@ -2229,12 +2260,13 @@ function calculateResults() {
   }
 }
 
-
-
 // 渲染分数图表
 function renderScoreChart(percentages) {
   const chart = document.getElementById("scoreChart");
   const details = document.getElementById("scoreDetails");
+
+  // 新增：如果页面上没有这两个容器，直接退出，避免报错
+  if (!chart || !details) return;
 
   chart.innerHTML = "";
   details.innerHTML = "";
@@ -2293,6 +2325,8 @@ function renderScoreChart(percentages) {
 // 渲染个性化推荐
 function renderRecommendations(dominantCategories, percentages) {
   const container = document.getElementById("recommendations");
+  if (!container) return;   // 新增：页面没有这个区块就直接退出
+  
   container.innerHTML = "";
 
   dominantCategories.forEach((category) => {
@@ -2395,6 +2429,8 @@ function sendResultsToGoogleSheets(dominantCategories) {
 // 渲染调香建议
 function renderSuggestions(percentages) {
   const container = document.getElementById("suggestions");
+  if (!container) return;   // 新增
+  
   container.innerHTML = "";
 
   // 分析用户的香调分布
